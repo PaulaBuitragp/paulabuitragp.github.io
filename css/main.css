@@ -1,0 +1,160 @@
+#header {
+		position: relative;
+		background-image: url("https://png.pngtree.com/thumb_back/fw800/back_our/20190628/ourmid/pngtree-cartoon-hand-drawn-yellow-pet-supplies-illustration-background-image_275642.jpg");
+		border-bottom: solid 1px #ccc;
+		padding: 3em 0 2em 0;
+		text-align: center;
+	}
+
+		#header h1 {
+			color: #F55506;
+			font-weight: 900;
+			font-size: 3.5em;
+			letter-spacing: -0.050em;
+			line-height: 1;
+		}
+#nav {
+		margin: 2.5em 0 0 0;
+	}
+
+		#nav > ul {
+			margin: 0;
+		}
+
+			#nav > ul > li {
+				display: inline-block;
+				font-style: unset;
+				margin: 0 0.35em 0 0.35em;
+			}
+
+				#nav > ul > li > ul {
+					display: none;
+				}
+
+				#nav > ul > li > a {
+					border-radius: 5px;
+					color: #5d5d5d;
+					text-decoration: none;
+					padding: 0.6em 1.2em 0.6em 1.2em;
+					-moz-transition: background-color .25s ease-in-out;
+					-webkit-transition: background-color .25s ease-in-out;
+					-ms-transition: background-color .25s ease-in-out;
+					transition: background-color .25s ease-in-out;
+					outline: 0;
+				}
+
+				#nav > ul > li:hover > a, #nav > ul > li.active > a {
+					background: #E8D0D0;
+				}
+
+				#nav > ul > li > a {
+					background: #F55506;
+					color: #fff !important;
+					font-weight: 700;
+				}
+.dropotron {
+		border-radius: 5px;
+		background-color: #252122;
+		background-color: rgba(34, 30, 31, 0.98);
+		padding: 1.25em 1.5em 1.25em 1.5em;
+		font-style: italic;
+		min-width: 13em;
+		box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.5);
+		text-align: left;
+		margin-top: -1.25em;
+		margin-left: -1px;
+		list-style: none;
+	}
+
+		.dropotron a, .dropotron span {
+			color: #aaa;
+			text-decoration: none;
+			-moz-transition: color .25s ease-in-out;
+			-webkit-transition: color .25s ease-in-out;
+			-ms-transition: color .25s ease-in-out;
+			transition: color .25s ease-in-out;
+		}
+
+		.dropotron li {
+			padding: 0.25em 0 0.25em 0;
+		}
+
+			.dropotron li:hover > a, .dropotron li:hover > span {
+				color: #fff;
+			}
+
+		.dropotron.level-0 {
+			margin-top: 2em;
+		}
+
+			.dropotron.level-0:before {
+				content: '';
+				display: block;
+				position: absolute;
+				left: 50%;
+				margin-left: -10px;
+				top: -9px;
+				border-left: solid 10px transparent;
+				border-right: solid 10px transparent;
+				border-bottom: solid 10px #252122;
+				border-bottom-color: rgba(34, 30, 31, 0.98);
+			}
+
+
+
+#banner {
+		background-image: url();
+		background-position: center center;
+		background-size: auto 80%;
+		background-repeat: no-repeat;
+		text-align: center;
+		position: relative;
+		padding: 1em 0;
+		margin: 1em 0 0 0;
+	}
+
+		#banner header {
+			background-color: rgba(34, 30, 31, 1);
+			display: inline-block;
+			padding: 2.5em 5em;
+			border-radius: 5px;
+		}
+
+			#banner header h2 {
+				color: #fff;
+				font-weight: 700;
+				font-size: 2.5em;
+				margin: 0 0 0.65em 0;
+			}
+
+			#banner header p {
+				color: #d52349;
+				padding: 0;
+				font-style: normal;
+				margin: 0;
+				font-size: 1.5em;
+			}
+@media screen and (max-width: 600px) {
+       table {
+           width:100%;
+       }
+       thead {
+           display: none;
+       }
+       tr:nth-of-type(2n) {
+           background-color: inherit;
+       }
+       tr td:first-child {
+           background: #f0f0f0;
+           font-weight:bold;
+           font-size:1.3em;
+       }
+       tbody td {
+           display: block;
+           text-align:center;
+       }
+       tbody td:before {
+           content: attr(data-th);
+           display: block;
+           text-align:center;
+       }
