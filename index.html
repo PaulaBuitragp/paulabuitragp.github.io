@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Seleccionar opción para mostrar un formulario u otro</title>
+<link type="text/css" href="css/styles.css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+function mostrar(id) {
+    if (id == "canino") {
+        $("#canino").show();
+        $("#felino").hide();
+        
+    }
+    
+    if (id == "felino") {
+        $("#canino").hide();
+        $("#felino").show();
+    }
+}
+
+</script>
+</head>
+
+<body>
+
+<h1>Agregue a su amigo de cuatro patas:</h1>
+
+<form action="index.php" method="post">
+    <p>Microchip: <input id = "microchip" type="number" name="Microchip" size="70" placeholder="Escriba el microchip" required></p>
+    Especie: 
+    <select id="status" name="status" onChange="mostrar(this.value);">
+        <option value="canino">Canino</option>
+        <option value="felino">Felino</option>
+     </select>
+</form>
+
+<div id="canino" class="element" style="display: none;">
+    <h2>Si es canino...</h2>
+    <form action="index.php" method="post">
+       <p>Sexo: <select  id = "hm" name = "sexo" class="select-css"> required>
+      <option value="">--Seleccione--</option>
+      <option value="MACHO">Macho</option>
+      <option value="HEMBRA">Hembra</option>
+    </select>
+  </p>
+  <p>Peligroso: <select  id = "pe" name = "peligroso" class="select-css"> required>
+    <option value="">--Seleccione--</option>
+    <option value="SI">SI</option>
+    <option value="NO">NO</option>
+  </select>
+</p>
+<p>Tamaño: <select  id = "mpg" name = "tamaño" class="select-css"> required>
+  <option value="">--Seleccione--</option>
+  <option value="PEQUEÑO">Pequeño</option>
+  <option value="MEDIANO">Mediano</option>
+  <option value="GRANDE">Grande</option>
+</select>
+</p>
+<p>Vecindario: <select  id = "localidad" name = "localidad" class="select-css"> required>
+  <option value="">--Seleccione--</option>
+  <option value="Antonio Nariño">Antonio Nariño</option>
+  <option value="Barrios Unidos">Barrios Unidos</option>
+  <option value="Bosa">Bosa</option>
+  <option value="Chapinero">Chapinero</option>
+  <option value="Ciudad Bolivar">Ciudad Bolivar</option>
+  <option value="Engativá">Engativá</option>
+  <option value="Fontibón">Fontibón</option>
+  <option value="Kennedy">Kennedy</option>
+  <option value="La Candelaria">La Candelaria</option>
+  <option value="Los Martires">Los Martires</option>
+  <option value="Puente Aranda">Puente Aranda</option>
+  <option value="Rafael Uribe Uribe">Rafael Uribe Uribe</option>
+  <option value="San Cristóbal">San Cristóbal</option>
+  <option value="Santa Fe">Santa Fe</option>
+  <option value="Suba">Suba</option>
+  <option value="Sumapaz">Sumapaz</option>
+  <option value="Teusaquillo">Teusaquillo</option>
+  <option value="Tunjuelito">Tunjuelito</option>
+  <option value="Usaquen">Usaquen</option>
+  <option value="Usme">Usme</option>
+</select>
+</p>
+<p>Raza: <select  id = "raza" name = "tamaño" class="select-css"> required>
+  <option value="">--Seleccione--</option>
+  <option value="SNAUSER">Snauser</option>
+  <option value="PASTOR ALEMAN">Pastor Aleman</option>
+  <option value="PERSA">Persa</option>
+</select>
+</p>
+<p>Dueño: <input type="text" name="Dueño" required></p>
+<p>Dirección: <input type="text" name="Direccion" required></p>
+<form name="subida-imagenes" type="POST" enctype="multipart/formdata" >
+  <input type="file" name="imagen1" />
+  <input name="ver" type="button" value = "Guardar" id="ver" onclick="agregarMascota()"/>
+<input type="reset" value="Borrar">
+    </form>
+</div>
+
+<div id="felino" class="element" style="display: none;">
+    <h2>Si es felino...</h2>
+    <form action="index.php" method="post">
+       <p>Sexo: <select  id = "hm" name = "sexo" class="select-css"> required>
+      <option value="">--Seleccione--</option>
+      <option value="MACHO">Macho</option>
+      <option value="HEMBRA">Hembra</option>
+    </select>
+  </p>
+  <p>Peligroso: <select  id = "pe" name = "peligroso" class="select-css"> required>
+    <option value="">--Seleccione--</option>
+    <option value="SI">SI</option>
+    <option value="NO">NO</option>
+  </select>
+</p>
+<p>Tamaño: <select  id = "mpg" name = "tamaño" class="select-css"> required>
+  <option value="">--Seleccione--</option>
+  <option value="PEQUEÑO">Pequeño</option>
+  <option value="MEDIANO">Mediano</option>
+  <option value="GRANDE">Grande</option>
+</select>
+</p>
+<p>Vecindario: <select  id = "localidad" name = "localidad" class="select-css"> required>
+  <option value="">--Seleccione--</option>
+  <option value="Antonio Nariño">Antonio Nariño</option>
+  <option value="Barrios Unidos">Barrios Unidos</option>
+  <option value="Bosa">Bosa</option>
+  <option value="Chapinero">Chapinero</option>
+  <option value="Ciudad Bolivar">Ciudad Bolivar</option>
+  <option value="Engativá">Engativá</option>
+  <option value="Fontibón">Fontibón</option>
+  <option value="Kennedy">Kennedy</option>
+  <option value="La Candelaria">La Candelaria</option>
+  <option value="Los Martires">Los Martires</option>
+  <option value="Puente Aranda">Puente Aranda</option>
+  <option value="Rafael Uribe Uribe">Rafael Uribe Uribe</option>
+  <option value="San Cristóbal">San Cristóbal</option>
+  <option value="Santa Fe">Santa Fe</option>
+  <option value="Suba">Suba</option>
+  <option value="Sumapaz">Sumapaz</option>
+  <option value="Teusaquillo">Teusaquillo</option>
+  <option value="Tunjuelito">Tunjuelito</option>
+  <option value="Usaquen">Usaquen</option>
+  <option value="Usme">Usme</option>
+</select>
+</p>
+<p>Raza: <select  id = "raza" name = "tamaño" class="select-css"> required>
+  <option value="">--Seleccione--</option>
+  <option value="SNAUSER">Snauser</option>
+  <option value="PASTOR ALEMAN">Pastor Aleman</option>
+  <option value="PERSA">Persa</option>
+</select>
+</p>
+<p>Dueño: <input type="text" name="Dueño" required></p>
+<p>Dirección: <input type="text" name="Direccion" required></p>
+<form name="subida-imagenes" type="POST" enctype="multipart/formdata" >
+  <input type="file" name="imagen1" />
+  <input name="ver" type="button" value = "Guardar" id="ver" onclick="agregarMascota()"/>
+<input type="reset" value="Borrar">
+    </form>
+</div>
+
+
+
+</body>
+</html>
